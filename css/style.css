@@ -39,10 +39,46 @@ h2 {
 
 #calendar-container {
   position: fixed;
+  color: black;
   top: 0;
   left: 20px;
   right: 20px;
   bottom: 20px; }
+
+.fc-event {
+  border: 1px solid #5070a7;
+  background-color: #5070a7;
+}
+
+.fc-button {
+  background-color: #2b3a52;
+  border: 1px solid #2b3a52;
+}
+a.fc-more {
+  color: black;
+}
+.fc-day-number{
+  color: black;
+}
+.fc-day:hover{
+  background: #d4e6fb;
+}
+.fc-button:hover {
+  border: 1px solid #5070a7;
+  background-color: #5070a7;
+}
+.fc-button-primary:disabled {
+  background-color: #0f60e0;
+  border: 1px solid #0f60e0;
+}
+.fc-unthemed td.fc-today {
+  background: #9cb0c7;
+}
+
+.fc-button-primary:not(:disabled).fc-button-active {
+  border: 1px solid #5070a7;
+  background-color: #5070a7;
+}
 
 .fc-header-toolbar {
   /*

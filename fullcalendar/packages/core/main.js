@@ -7510,7 +7510,6 @@ Docs & License: https://fullcalendar.io/
             this.renderBusinessHoursMem(props.businessHours);
             this.renderDateSelectionMem(props.dateSelection);
             this.renderEventsMem(props.eventStore);
-            this.renderEventSelectionMem(props.eventSelection);
             this.renderEventDragMem(props.eventDrag);
             this.renderEventResizeMem(props.eventResize);
         };
