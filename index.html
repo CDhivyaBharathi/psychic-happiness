@@ -8,13 +8,16 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="fonts/icomoon/style.css">
   
     <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
     <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
     
-    
+    <script>
+         
+    </script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
@@ -22,14 +25,28 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>Calendar #10</title>
+    
+  
   </head>
   <body>
-  
-
+    <header>
+      <img src="JAZBAA.svg" alt="Jazbaa Logo" width="150">
+      <div id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    
+      <nav id="nav-menu">
+        <a href="#about">About us</a>
+        <a href="#shop">Shop</a>
+        <a href="#events">Events Calendar</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </header>
+    <main>
   <div id='calendar-container'>
     <div id='calendar'></div>
   </div>
-    
+</main>
     
 
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -45,6 +62,7 @@
     
 
     <script>
+
       document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
@@ -57,21 +75,29 @@
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       },
       defaultView: 'dayGridMonth',
-      // defaultDate: '2020-02-12',  // Remove or comment out this line
-      navLinks: true,
-      editable: false,
-      eventStartEditable: false,
-      eventDurationEditable: false,
-      eventLimit: true,
+      defaultDate: '2020-02-12',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
       events: [
         {
           title: 'All Day Event',
-          start: '2025-02-01',
+          start: '2020-02-01',
+        },
+        {
+          title: 'New event',
+          start: '2020-02-05',
+          end: '2020-02-06'
+        },
+        {
+          title: 'Long Event',
+          start: '2020-02-05',
+          end: '2020-02-07'
         },
         {
           groupId: 999,
           title: 'Repeating Event',
-          start: '2025-02-09'
+          start: '2020-02-09T16:00:00'
         },
         {
           groupId: 999,
@@ -122,5 +148,42 @@
     </script>
 
     <script src="js/main.js"></script>
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+          document.getElementById('nav-menu').classList.toggle('active');
+      });
+      
+      function toggleMenu() {
+          const navMenu = document.getElementById('nav-menu');
+          navMenu.classList.toggle('active');
+      }
+      </script>
+   <footer class="footer">
+           <div class="container">
+             <div class="footer-content">
+               <div class="footer-section">
+                 <h1>Get In Touch</h1>
+                 <p>Email</p>
+                 <p></p><a href="mailto:culturalministry@ashoka.edu.in">culturalministry@ashoka.edu.in</a></p>
+                 <div class="line"></div>
+                 <div class="social-icons">
+                   <a href="https://www.instagram.com/jazbaa.ashoka/"><i class="fab fa-instagram"></i></a>
+                   <a href="https://x.com/JazbaaAshoka"><i class="fab fa-twitter"></i></a>
+                   <a href="https://www.linkedin.com/company/jazbaa-the-cultural-ministry/"><i class="fab fa-linkedin"></i></a>
+                   <a href="https://form.jotform.com/242996769922074"><i class="fa-solid fa-align-right"></i></a>
+                   
+                 </div>
+                 <div class="line"></div>
+               </div>
+             </div>  
+         
+             <div class="footer-bottom">
+               <p>&copy; 2024 Jazbaa. All rights reserved.</p>
+             </div>
+           </div>
+       </footer>
+   
+
   </body>
+  
 </html>
